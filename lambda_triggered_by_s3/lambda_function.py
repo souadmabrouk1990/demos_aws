@@ -26,7 +26,7 @@ def lambda_handler(event, context):
         print(content_file)
         # Si le mot "Booked" apparait dans le fichier, envoyer une notification
         if ("booked") in content_file:
-            sns_client.publish(TopicArn='arn:aws:sns:eu-west-1:707529749811:topic-lambda-file-processing',
+            sns_client.publish(TopicArn='arn:aws:sns:eu-west-1:xxxxxxxx:topic-lambda-file-processing',
                                Message='You successfuly booked your trip')
             print("Notifications are successfuly sent to the sns topic subscriptions")
     return True
